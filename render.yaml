@@ -1,0 +1,10 @@
+﻿services:
+  - type: web
+    name: fnf-server
+    runtime: node
+    buildCommand: npm install --ignore-scripts && npx tsc
+    startCommand: node build/index.js
+    envVars:
+      - key: PORT
+        value: 10000
+    plan: free
